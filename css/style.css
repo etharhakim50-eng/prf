@@ -204,6 +204,153 @@ body{
     background-color: #3d3e51;
     color: #eee;
 }
+/*-------------------------------------------- projects-------------------------------------------- */
+#prjs{
+    gap: 0.5vw;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: grid;
+    grid-template-rows: 330px 330px;
+    grid-template-columns: 14vw 14vw 14vw 11vw 22vw 20vw;
+    grid-template-areas: 
+    "prj01 prj01 prj01 prj02 prj02 prj05"
+    "prj03 prj03 prj04 prj04 prj04 prj05"
+    ;
+}
+#prjs__title{
+    padding: 10px 0;
+    color: #3d3e51;
+    font-family: "DM Serif Display", serif ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+#prjs__title h2{
+    text-decoration: underline;
+    font-family: "DM Serif Display", serif ;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+#prjs__title p{
+    margin-top: 10px;
+    text-align: center;
+    color: #3d3e51;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+.prj__cont{
+    border-radius: 20px;
+    background-color: #3d3e5185;
+    color: #eee;
+}
+.prj__cont h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+.prj__cont h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.prj__cont p{
+    margin-bottom: 10px;
+}
+.prj__cont a{
+    text-decoration: none;
+    margin-top: 100px;
+    color: #3d3e51;
+    font-weight: 700;
+    align-self: flex-end;
+}
+.prj__cont a:hover{
+    text-decoration: underline;
+}
+#prj01{
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: prj01;
+}
+#prj01 img{
+    width: 200px;
+    height: 280px;
+    border-radius: 20px;
+}
+#prj02{
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: prj02;
+}
+#prj02 img{
+    width: 180px;
+    height: 280px;
+    border-radius: 20px;
+    object-fit: contain;
+}
+#prj03{
+    grid-area: prj03;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+#prj03 img{
+    margin-bottom: 20px;
+    width: 150px;
+    height: 270px;
+    border-radius: 20px;
+}
+#prj03__text h3{
+    margin-bottom: 10px;
+}
+#prj03__text h2{
+    margin-bottom: 10px;
+}
+#prj03__text p{
+    margin-bottom: 8px;
+}
+#prj04{
+    grid-area: prj04;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+#prj04__text{
+    justify-self: flex-start;
+    width: 50%;
+}
+#prj04 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+#prj05{
+    grid-area: prj05;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+#prj05 img{
+    margin-bottom: 20px;
+    width: 90%;
+    height: 320px;
+    border-radius: 25px;
+}
 /*-------------------------------------------- media query --------------------------------------------*/
 /*-------------------------------------------- small screen-------------------------------------------- */
 @media screen and (min-width: 320px) and (max-width: 780px){
@@ -270,6 +417,11 @@ body{
     #comp{
         display: none;
     }
+    /* -------------------------prjs------------------- */
+    #prjs{
+        display: flex;
+        flex-direction: column;
+    }
 }
 /*-------------------------------------------- medium screen-------------------------------------------- */
 @media screen and (min-width: 780px) and (max-width: 1024px){
@@ -282,4 +434,35 @@ body{
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
     }
+    /* -------------------------prjs------------------- */
+    
+    .prj__cont h3{
+    margin-bottom: 10px;
+    }
+    .prj__cont h2{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    }
+    .prj__cont p{
+    margin-bottom: 25px;
+    }
+    #prj03 img{
+    margin-bottom: 20px;
+    width: 120px;
+    height: 270px;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+#prj04 img{
+    width: 220px;
+    height: 200px;
+}
+    /* #prj03__img img{
+        width: 150px;
+        height: 150px;
+        align-self: flex-start;
+        justify-self: flex-start;
+    } */
+    #prj05__img img{
+    margin-bottom: 0px;}
 }
