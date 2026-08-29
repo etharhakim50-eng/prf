@@ -263,7 +263,6 @@ body{
 }
 .prj__cont a{
     text-decoration: none;
-    margin-top: 100px;
     color: #3d3e51;
     font-weight: 700;
     align-self: flex-end;
@@ -330,7 +329,7 @@ body{
 }
 #prj04__text{
     justify-self: flex-start;
-    width: 50%;
+    width: 60%;
 }
 #prj04 img{
     width: 300px;
@@ -349,6 +348,9 @@ body{
     width: 90%;
     height: 320px;
     border-radius: 25px;
+}
+#prj05 a{
+    margin-top: 50px;
 }
 /*-------------------------------------------- media query --------------------------------------------*/
 /*-------------------------------------------- small screen-------------------------------------------- */
