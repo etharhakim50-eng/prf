@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+body{
+    background-color: #FAFAFC;
+    color: #2C2D35;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* -------------------------header------------------- */
+#hd{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 50px;
+}
+#logo{
+    display: flex;
+    flex: 2;
+    align-items: center;
+    gap: 10px;
+    font-weight: 1000;
+    font-size: 1rem;
+    color: #3d3e51;
+}
+#logo-badge{
+    background-color:rgba(128, 0, 128, 0.123);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+#nav{
+    flex: 6;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+}
+#nav a {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+#nav a:hover{
+    font-weight: 900;
+    text-decoration: underline;
+    color: #2C2D35;
+}
+#search{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7280;
+    font-weight: 500;
+}
+#search input{
+    padding: 10px;
+    height: 25px;
+    border-radius: 7px;
+    margin: 0 10px;
+    border: 1px solid gray;
+}
+/* ---------------------hero------------------------ */
+#hero{
+    width: 100%;
+    margin: 25px auto;
+    text-align: center;
+    position: relative;
+}
+#hero__title{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+#hero__title h1{
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+#star__icon{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+}
+#hero__grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+#hero__left{
+    margin: 100px 50px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#hero__left p{
+    margin-left: 25px;
+    color: #6b7280;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+#comp{
+    margin-left: 45px;
+    position: relative;
+}
+#comp__bg{
+    width: 120px;
+    height: 120px;
+    background-color: #3d3e51;
+    border-radius: 50%;
+}
+#comp__badge{
+    position: absolute;
+    font-size: 6rem;
+    top: -2px;
+    left: -20px;
+}
+#hero__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#photo__bg{
+    width: 320px;
+    height: 360px;
+    background-color: #3d3e51 ;
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+#photo__bg img{
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+#hero__right{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: auto;
+}
+#right__icons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+#right__icons i{
+    color: blue;
+    width: 50px;
+}
+#right__tags{
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+#right__tags span{
+    background: #E8E4F1;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+#hero__right p{
+    color:#6b7280 ;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* media query */
+@media screen and (min-width: 320px) and (max-width: 780px){
+    #search{
+        display: none;
+    }
+}
