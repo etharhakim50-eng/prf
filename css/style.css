@@ -294,7 +294,6 @@ body{
     width: 180px;
     height: 280px;
     border-radius: 20px;
-    object-fit: contain;
 }
 #prj03{
     grid-area: prj03;
