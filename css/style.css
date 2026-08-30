@@ -166,6 +166,7 @@ body{
     flex-direction: column;
     gap: 12px;
     margin-right: 20px;
+    align-self: flex-end;
 }
 #right__icons{
     display: flex;
