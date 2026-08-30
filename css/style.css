@@ -112,6 +112,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-self: flex-start;
 }
 #hero__left p{
     margin-left: 25px;
@@ -169,10 +170,6 @@ body{
     display: flex;
     justify-content: flex-end;
     gap: 8px;
-}
-#right__icons i{
-    color: blue;
-    width: 50px;
 }
 #right__tags{
     display: flex;
@@ -242,6 +239,7 @@ body{
     line-height: 1.5rem;
 }
 .prj__cont{
+    gap: 1vw;
     border-radius: 20px;
     background-color: #3d3e5185;
     color: #eee;
@@ -250,16 +248,11 @@ body{
     font-size: 2.5rem;
     font-weight: 700;
     text-decoration: underline;
-    margin-bottom: 20px;
     align-self: flex-start;
 }
 .prj__cont h2{
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
-}
-.prj__cont p{
-    margin-bottom: 10px;
 }
 .prj__cont a{
     text-decoration: none;
@@ -281,6 +274,7 @@ body{
     width: 200px;
     height: 280px;
     border-radius: 20px;
+    object-fit: cover;
 }
 #prj02{
     padding: 0 20px;
@@ -293,6 +287,7 @@ body{
     width: 180px;
     height: 280px;
     border-radius: 20px;
+    object-fit: cover;
 }
 #prj03{
     grid-area: prj03;
@@ -300,23 +295,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
 #prj03 img{
-    margin-bottom: 20px;
     width: 150px;
     height: 270px;
     border-radius: 20px;
-}
-#prj03__text h3{
-    margin-bottom: 10px;
-}
-#prj03__text h2{
-    margin-bottom: 10px;
-}
-#prj03__text p{
-    margin-bottom: 8px;
+    object-fit: cover;
 }
 #prj04{
     grid-area: prj04;
@@ -324,17 +309,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-right: 20px;
-}
-#prj04__text{
-    justify-self: flex-start;
-    width: 60%;
+    padding: 0 20px;
 }
 #prj04 img{
     width: 300px;
     height: 200px;
     border-radius: 20px;
+    object-fit: cover;
 }
 #prj05{
     grid-area: prj05;
@@ -342,17 +323,64 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    padding: 0 20px;
 }
 #prj05 img{
-    margin-bottom: 20px;
     width: 90%;
     height: 320px;
     border-radius: 25px;
-}
-#prj05 a{
-    margin-top: 50px;
+    object-fit: cover;
 }
 /*-------------------------------------------- media query --------------------------------------------*/
+/*-------------------------------------------- medium screen-------------------------------------------- */
+@media screen and (min-width: 780px) and (max-width: 1024px){
+    #search{
+        display: none;
+    }
+    /* -------------------------hero------------------- */
+    #hero__grid{
+        margin:0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+    }
+    /* -------------------------prjs------------------- */
+    #prjs{
+        grid-template-rows: 270px 270px 270px;
+        grid-template-columns: repeat(6,15.8vw);
+        grid-template-areas: 
+        "prj01 prj01 prj01 prj02 prj02 prj02"
+        "prj05 prj05 prj03 prj03 prj03 prj03"
+        "prj05 prj05 prj04 prj04 prj04 prj04"
+    ;
+    }
+#prj01 img{
+    width: 50%;
+    height: 90%;
+    object-fit: cover;
+}
+#prj02 img{
+    width: 50%;
+    height: 90%;
+    object-fit: cover;
+}
+#prj03 img{
+    width: 150px;
+    height: 90%;
+    object-fit: cover;
+}
+#prj04 img{
+    width: 300px;
+    height: 80%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#prj05 img{
+    width: 90%;
+    height: 45%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+}
 /*-------------------------------------------- small screen-------------------------------------------- */
 @media screen and (min-width: 320px) and (max-width: 780px){
     body{
@@ -411,59 +439,62 @@ body{
     }
     #hero__right{
         flex: 2;
-    }
-    #hero__right button{
-        align-self: center;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     #comp{
         display: none;
     }
     /* -------------------------prjs------------------- */
     #prjs{
+        width: 90%;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
     }
-}
-/*-------------------------------------------- medium screen-------------------------------------------- */
-@media screen and (min-width: 780px) and (max-width: 1024px){
-    #search{
-        display: none;
+    .prj__cont{
+        height: 420px;
+        width: 90%;
     }
-    /* -------------------------hero------------------- */
-    #hero__grid{
-        margin:0 auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
+    #prj01 img{
+        width: 60%;
+        height: 90%;
+        object-fit: cover;
     }
-    /* -------------------------prjs------------------- */
-    
-    .prj__cont h3{
-    margin-bottom: 10px;
-    }
-    .prj__cont h2{
-    font-size: 1rem;
-    margin-bottom: 10px;
-    }
-    .prj__cont p{
-    margin-bottom: 25px;
+    #prj02 img{
+        width: 60%;
+        height: 90%;
+        object-fit: cover;
     }
     #prj03 img{
-    margin-bottom: 20px;
-    width: 120px;
-    height: 270px;
-    align-self: flex-start;
-    justify-self: flex-start;
-}
-#prj04 img{
-    width: 220px;
-    height: 200px;
-}
-    /* #prj03__img img{
-        width: 150px;
-        height: 150px;
-        align-self: flex-start;
-        justify-self: flex-start;
-    } */
-    #prj05__img img{
-    margin-bottom: 0px;}
+        width: 60%;
+        height: 90%;
+        object-fit: cover;
+    }
+    #prj04{
+        padding-top: 40px;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    #prj04 h3{
+        position: absolute;
+        top: 10px;
+    }
+    #prj04 img{
+        width: 80%;
+        height: 45%;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    #prj05{
+        padding-bottom: 40px;
+    }
+    #prj05 img{
+        width: 80%;
+        height: 45%;
+        border-radius: 20px;
+        object-fit:cover;
+    }
 }
